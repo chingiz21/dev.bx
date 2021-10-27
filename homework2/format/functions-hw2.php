@@ -1,16 +1,15 @@
 <?php
 
+$numberOfMovie = 1;
+
 function printMovies(array $movies, int $input, int $numberOfMovie): void
 {
 	foreach ($movies as $movie)
 	{
-		if($movie['age_restriction'] <= $input)
+		if($movie['age_restriction'] <= $input and $input > 0)
 		{
 			printMessage(formatMovie($movie, $numberOfMovie));
 			$numberOfMovie++;
-		}else
-		{
-			continue;
 		}
 	}
 }

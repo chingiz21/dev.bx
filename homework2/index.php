@@ -7,7 +7,6 @@ require "./format/functions-hw2.php";
 printMessage("Welcome to movie list!");
 while(true) {
 	$input = readline("Enter age: ");
-	$numberOfMovie = 1;
 	if ($input === '')
 	{
 		printMessage("Closing the session...");
@@ -15,10 +14,10 @@ while(true) {
 	}
 	if (is_numeric($input))
 	{
-		printMovies($movies, $input, $numberOfMovie);
+		printMovies($movies, (int)$input, $numberOfMovie);
 	}else
 	{
-		printMessage("Wrong enter age!");
+		printMessage("Wrong age!");
 	}
 }
 
