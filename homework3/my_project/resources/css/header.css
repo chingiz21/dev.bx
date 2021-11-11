@@ -112,6 +112,10 @@ input::-webkit-search-results-decoration {
 	font-style: normal;
 	border-radius: 10px;
 }
+a {
+	text-decoration: none;
+	color: #fff;
+}
 
 .btn_addMovie:hover {
 	background-color: #2dbd89;

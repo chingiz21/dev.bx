@@ -46,7 +46,7 @@
 				</div>
 				<div class="header_addMovie">
 					<button class="btn btn_addMovie">
-						Добавить фильм
+						<a href="add-movie.php">Добавить фильм</a>
 					</button>
 				</div>
 				</form>
