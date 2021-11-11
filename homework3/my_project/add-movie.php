@@ -13,11 +13,26 @@ require_once "./lib/movies-functions.php";
 
 $page = "layout.php";
 
-if ($_SERVER["REQUEST_METHOD"] === "POST")
+if ($_SERVER["REQUEST_METHOD"] === "GET")
 {
-	$movieName = $_POST['search-input'];
-	$movies = getMovieByName($movies, $movieName);
+	if (isset($_GET['genre']))
+	{
+		$code = $_GET['genre'];
+		$movies = getMovieByGenre($movies, $code, $genres);
+	}
+	if (isset($_GET['search-input']))
+	{
+		$movieName = $_GET['search-input'];
+		$movies = getMovieByName($movies, $movieName);
+	}
 }
+
+
+// if ($_SERVER["REQUEST_METHOD"] === "POST")
+// {
+// 	$movieName = $_POST['search-input'];
+// 	$movies = getMovieByName($movies, $movieName);
+// }
 
 $nav = renderTemplate("./resources/pages/navLink.php", [
 	'navLinks' => $navLinks,
