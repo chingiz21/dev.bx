@@ -7,7 +7,7 @@ $hours = floor($minutes / 60);
 <div class="movie-card__wrapper">
 	<div class="movie-card__wrapper-hidden">
 		<div class="movie-card__wrapper-hidden-link">
-			<a href="<?="http://dev.bx/homework3/my_project/movie-details.php?id=" . $movie['id']?>" >Подробнее</a>
+			<a href="<?="movie-details.php?id=" . $movie['id']?>" >Подробнее</a>
 		</div>
 	</div>
 	<div class="movie-card__img" <?= "style=\"background: url(resources/src/movie-cards/" . $movie['id']  . ".jpg) center no-repeat; background-size: 370px 430px\" "?>></div>
@@ -30,13 +30,9 @@ $hours = floor($minutes / 60);
 				<?= $movie['duration'] . " мин. "?> / <?= $hours . ":" . ($minutes - ($hours*60)) ?>
 			</div>
 			<div class="movie-card__info-genres">
-				<?php foreach ( $movie['genres'] as $genre): ?>
-					<?php if ($genre == end($movie['genres'])): ?>
-						<?= $genre?>
-					<?php else: ?>
-						<?= $genre . ", "?>
-					<?php endif; ?>
-				<?php endforeach;?>
+
+				<?= implode(", ", $movie['genres'])?>
+
 			</div>
 
 

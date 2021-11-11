@@ -5,7 +5,6 @@
 /** @var string $currentPage */
 /** @var string $movieCard */
 /** @var string $code */
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +38,7 @@
 		<header class="header">
 			<div class="header-wrapper">
 				<div class="search-form">
-					<form action="index.php" method="post">
+					<form action="index.php" method="get">
 					<i class="fas fa-search"></i>
 					<input class="search-input" type="search" name="search-input" placeholder="Поиск по каталогу..."
 					   	id="search">

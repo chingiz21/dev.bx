@@ -89,13 +89,7 @@
 										<span class="movieInfo-content"><?= $movies[$movieNumber]['release-date'] ?></span>
 										<span class="movieInfo-content"><?= $movies[$movieNumber]['director'] ?></span>
 										<span class="movieInfo-content">
-											<?php foreach ( $movies[$movieNumber]['cast'] as $actor): ?>
-												<?php if ($actor == end($movies[$movieNumber]['cast'])): ?>
-													<?= $actor?>
-												<?php else: ?>
-													<?= $actor . ", "?>
-												<?php endif; ?>
-											<?php endforeach;?>
+											<?php echo implode(", ", $movies[$movieNumber]['cast']) ?>
 										</span>
 									</div>
 								</div>
