@@ -39,16 +39,20 @@
 	</nav>
 	<div class="main-container">
 		<header class="header">
-			<div class="search-form">
-				<i class="fas fa-search"></i>
-				<input class="search-input" type="search" name="search-input" placeholder="Поиск по каталогу"
-					   id="search">
-				<button class="search-button" type="submit">Искать</button>
-			</div>
-			<div class="header_addMovie">
-				<button class="btn btn_addMovie">
-					Добавить фильм
-				</button>
+			<div class="header-wrapper">
+				<div class="search-form">
+					<form action="index.php" method="get">
+						<i class="fas fa-search"></i>
+						<input class="search-input" type="search" name="search-input" placeholder="Поиск по каталогу..."
+							   id="search">
+						<button class="search-button" type="submit">Искать</button>
+				</div>
+				<div class="header_addMovie">
+					<button class="btn btn_addMovie">
+						<a href="add-movie.php">Добавить фильм</a>
+					</button>
+				</div>
+				</form>
 			</div>
 		</header>
 		<div class="main-container__content">
