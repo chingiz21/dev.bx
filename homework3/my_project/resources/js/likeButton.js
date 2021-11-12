@@ -1,20 +1,28 @@
 var likeNode = document.getElementById("like");
 var likeButton = document.getElementById('likeButton');
+var notifyNode = document.getElementById('notifyId');
+var movieName = document.getElementById('movieName');
 
-const totalStars = 10;
+
+//likeButton & notify
 likeNode.addEventListener('click', () => {
 	if (!likeButton.classList.contains('like-active'))
 	{
 		likeButton.classList.add('like-active');
-		console.log('clc')
+		notifyNode.innerText = 'Фильм "' + movieName.innerText + '" добавлен в избранное';
+		notifyNode.classList.add('notify-show');
+		setTimeout(() => {
+			notifyNode.classList.remove('notify-show');
+		}, 2000);
 	}else{
 		likeButton.classList.remove('like-active');
 	}
 });
 
+//rating stars
+const totalStars = 10;
 const rating = document.getElementById('text-rating').textContent;
 numRating = Number(rating);
-console.log(typeof (numRating));
 document.addEventListener('DOMContentLoaded', getRating);
 
 function getRating() {

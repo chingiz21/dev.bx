@@ -66,6 +66,10 @@
 /*	transition: .5s all ease;*/
 /*}*/
 
+.fa-heart:not(.like-active) {
+	transition: .3s ease;
+}
+
 .fa-heart.like-active {
 	color: #cb2424;
 	transition: .3s ease all;
@@ -274,4 +278,25 @@
 	font-family: "Font Awesome 5 Free";
 	color: #E78818;
 	font-weight: 900;
+}
+
+.notify {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	font-family: Open Sans;
+	font-style: normal;
+	opacity: 0;
+	background-color: #000;
+	color: #fff;
+	padding: 10px;
+}
+
+.notify:not(.notify-show) {
+	transition: .3s ease;
+}
+
+.notify-show {
+	opacity: 1;
+	transition: .3s ease all;
 }

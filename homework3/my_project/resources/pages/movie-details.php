@@ -31,7 +31,7 @@
 		<div class="nav-menu">
 			<ul>
 				<?php foreach ($config['menu'] as $code => $name): ?>
-					<li class="<?= $currentPage === $code ? "nav-menu__active" : "" ?>"><a href="<? $code . ".php"?>"><?= $name ?></a></li>
+					<li class="<?= $currentPage === $code ? "nav-menu__active" : "" ?>"><a href="<?= $code . ".php"?>"><?= $name ?></a></li>
 				<?php endforeach; ?>
 				<?= $content?>
 			</ul>
@@ -56,7 +56,7 @@
 				<div class="movie-info-wrapper">
 					<div class="movie-info__head">
 						<div class="movie-info__head-title">
-							<div class="movie-info__head-name"><?= $movies[$movieNumber]['title'] ?></div>
+							<div class="movie-info__head-name" id="movieName"><?= $movies[$movieNumber]['title'] ?></div>
 							<div class="movie-info__head-like" id="like"><i class="fas fa-heart" id="likeButton"></i></div>
 						</div>
 						<div class="movie-info__head-titleEn">
@@ -101,6 +101,7 @@
 				</div>
 			</div>
 		</div>
+	<div class="notify" id="notifyId">вфывф</div>
 	</div>
 </div>
 </body>
