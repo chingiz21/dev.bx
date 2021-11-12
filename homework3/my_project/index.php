@@ -13,13 +13,14 @@ require_once "./lib/movies-functions.php";
 
 $page = "layout.php";
 $code = '';
-
+$currentPage = getFileName(__FILE__);
 
 
 
 if (isset($_GET['genre']))
 {
 	$code = $_GET['genre'];
+	$currentPage = '';
 	$movies = getMovieByGenre($movies, $code, $genres);
 }
 if (isset($_GET['search-input']))
@@ -49,5 +50,5 @@ $movieCard = renderTemplate("./resources/pages/movie-cards.php", [
 renderLayout($page, $nav, [
 	'config' => $config,
 	'movieCard' => $movieCard,
-	'currentPage' => getFileName(__FILE__)
+	'currentPage' => $currentPage
 ]);
