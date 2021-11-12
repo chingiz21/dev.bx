@@ -27,8 +27,8 @@
 		</div>
 		<div class="nav-menu">
 			<ul>
-				<?php foreach ($config['menu'] as $code => $name): ?>
-					<li class="<?= $currentPage === $code ? "nav-menu__active" : "" ?>"><a href="<? $code . ".php"?>"><?= $name ?></a></li>
+				<?php foreach ($config['menu'] as $codeMains => $name): ?>
+					<li class="<?= $currentPage === $codeMains ? "nav-menu__active" : "" ?>"><a href="<?= $codeMains . ".php"?>"><?= $name ?></a></li>
 				<?php endforeach; ?>
 				<?= $content?>
 			</ul>

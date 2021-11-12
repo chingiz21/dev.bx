@@ -14,18 +14,18 @@ require_once "./lib/movies-functions.php";
 $page = "layout.php";
 $code = '';
 
-if ($_SERVER["REQUEST_METHOD"] === "GET")
+
+
+
+if (isset($_GET['genre']))
 {
-	if (isset($_GET['genre']))
-	{
-		$code = $_GET['genre'];
-		$movies = getMovieByGenre($movies, $code, $genres);
-	}
-	if (isset($_GET['search-input']))
-	{
-		$movieName = $_GET['search-input'];
-		$movies = getMovieByName($movies, $movieName);
-	}
+	$code = $_GET['genre'];
+	$movies = getMovieByGenre($movies, $code, $genres);
+}
+if (isset($_GET['search-input']))
+{
+	$movieName = $_GET['search-input'];
+	$movies = getMovieByName($movies, $movieName);
 }
 
 

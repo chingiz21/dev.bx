@@ -5,6 +5,6 @@
 /** @var array $config */
 /** @var string $code */
 ?>
-<li class="<?= $link == $code ? "nav-menu__active" : "" ?>"><a href="<?= "index.php?genre=" . $link ?>"><?= $name?></a></li>
+<li class="<?= $link === $code ? "nav-menu__active" : "" ?>"><a href="<?= "index.php?genre=" . $link ?>"><?= $name?></a></li>
 
 
