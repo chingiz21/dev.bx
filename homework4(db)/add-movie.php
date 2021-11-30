@@ -3,17 +3,15 @@ declare(strict_types=1);
 /** @var array $config */
 require_once "./config/app.php";
 /** @var array $navLinks */
-/** @var array $movies */
-require_once "./data/movies.php";
 /** @var array $genres */
 require_once "./lib/template-functions.php";
 require_once "./lib/helper-functions.php";
 require_once "./lib/movies-functions.php";
-/** @var array $database */
-require_once "./lib/db_init.php";
 
+$database = dbInit($config);
 $page = "layout.php";
 $navLinks = generateNavLinks($database);
+
 
 
 if (isset($_GET['genre'])) {

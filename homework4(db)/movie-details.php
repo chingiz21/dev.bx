@@ -7,9 +7,8 @@ require_once "./lib/template-functions.php";
 require_once "./lib/helper-functions.php";
 require_once "./lib/movies-functions.php";
 /** @var array $movies */
-/** @var array $database */
-require_once "./lib/db_init.php";
 
+$database = dbInit($config);
 $page = "movie-details.php";
 $navLinks = generateNavLinks($database);
 

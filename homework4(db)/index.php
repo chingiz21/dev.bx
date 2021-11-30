@@ -9,13 +9,12 @@ require_once "./config/app.php";
 require_once "./lib/template-functions.php";
 require_once "./lib/helper-functions.php";
 require_once "./lib/movies-functions.php";
-/** @var array $database */
-require_once "./lib/db_init.php";
 //endregion
 
 $page = 'layout.php';
 $code = '';
 $currentPage = getFileName(__FILE__);
+$database = dbInit($config);
 
 $navLinks = generateNavLinks($database);
 
