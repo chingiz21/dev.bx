@@ -4,6 +4,8 @@ mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 function getMovieById($database, string $id, array $actorsList): array
 {
+	$id = (int)$id;
+
 	$query = querySelectOfMovies() . ' where m.ID = ' . $id . ' group by 1';
 	$result = mysqli_query($database, $query,MYSQLI_STORE_RESULT);
 
@@ -81,6 +83,7 @@ function getListOfMovies($database, array $genres, string $searchKey = '')
 		return returnModifiedArray($result2, $genres);
 	}
 
+	$searchKey = mysqli_real_escape_string($database, $searchKey);
 	$query = querySelectOfMovies() . 'where g.CODE = \'' . $searchKey . '\' ' . ' group by 1';
 
 	$result = mysqli_query($database, $query, MYSQLI_STORE_RESULT);
@@ -90,16 +93,16 @@ function getListOfMovies($database, array $genres, string $searchKey = '')
 
 }
 
-function returnModifiedArray(array $arr, array $actorsList, string $key = 'GENRES')
+function returnModifiedArray(array $arr, array $keyList, string $key = 'GENRES')
 {
 	$newArray = [];
 	foreach ($arr as &$movie)
 	{
-		$movieActors = explode(',', $movie[$key]);
-		foreach ($movieActors as $actor)
+		$movieItems = explode(',', $movie[$key]);
+		foreach ($movieItems as $actor)
 		{
 			$actor = (int)$actor - 1;
-			$result = $actorsList[$actor]['NAME'];
+			$result = $keyList[$actor]['NAME'];
 			$newArray[] = $result;
 		}
 		$movie[$key] = $newArray;
