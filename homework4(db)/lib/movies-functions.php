@@ -99,10 +99,10 @@ function returnModifiedArray(array $arr, array $keyList, string $key = 'GENRES')
 	foreach ($arr as &$movie)
 	{
 		$movieItems = explode(',', $movie[$key]);
-		foreach ($movieItems as $actor)
+		foreach ($movieItems as $item)
 		{
-			$actor = (int)$actor - 1;
-			$result = $keyList[$actor]['NAME'];
+			$item = (int)$item - 1;
+			$result = $keyList[$item]['NAME'];
 			$newArray[] = $result;
 		}
 		$movie[$key] = $newArray;
