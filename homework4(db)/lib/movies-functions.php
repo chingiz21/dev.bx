@@ -78,18 +78,18 @@ function getListOfMovies($database, array $genres, string $searchKey = '')
 	{
 		$query = querySelectOfMovies() . 'group by 1';
 
-		$result = mysqli_query($database, $query, MYSQLI_STORE_RESULT);
-		$result2 = mysqli_fetch_all($result, MYSQLI_ASSOC);
-		return returnModifiedArray($result2, $genres);
+		$queryResult = mysqli_query($database, $query, MYSQLI_STORE_RESULT);
+		$assocArray = mysqli_fetch_all($queryResult, MYSQLI_ASSOC);
+		return returnModifiedArray($assocArray, $genres);
 	}
 
 	$searchKey = mysqli_real_escape_string($database, $searchKey);
 	$query = querySelectOfMovies() . 'where g.CODE = \'' . $searchKey . '\' ' . ' group by 1';
 
-	$result = mysqli_query($database, $query, MYSQLI_STORE_RESULT);
-	$result2 = mysqli_fetch_all($result, MYSQLI_ASSOC);
+	$queryResult = mysqli_query($database, $query, MYSQLI_STORE_RESULT);
+	$assocArray = mysqli_fetch_all($queryResult, MYSQLI_ASSOC);
 
-	return returnModifiedArray($result2, $genres);
+	return returnModifiedArray($$assocArray, $genres);
 
 }
 
