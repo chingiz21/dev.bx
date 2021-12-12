@@ -59,12 +59,6 @@ class FinancialTransactionsRuTest extends \PHPUnit\Framework\TestCase
 		$dataGenerator = new \App\DataGenerator\FinancialTransactionsRu();
 
 		$dataGenerator->setFields([]);
-		$dataGenerator
-			->setName('Name')
-			->setBIC('BIC')
-			->setBankName('BankName')
-			->setCorrespondentAccount('CorrespondentAccount')
-			->setPersonalAccount('CorrespondentAccount');
 
 		$data = $dataGenerator->getData();
 
