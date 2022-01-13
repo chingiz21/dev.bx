@@ -1,3 +1,5 @@
+// import {toggleElem} from "./toggle.js";
+
 var likeNode = document.getElementById("like");
 var likeButton = document.getElementById('likeButton');
 var notifyNode = document.getElementById('notifyId');
@@ -31,3 +33,20 @@ function getRating() {
 	document.querySelector(`.stars-inner`).style.width = starPercentageRounded;
 	document.querySelector(`.movie-info__content-rating-number`).innerHTML = rating
 }
+
+//hamburger actions
+let hamburger = document.getElementById("hamb");
+let nav = document.getElementById("nav");
+let style = getComputedStyle(nav);
+console.log(style);
+
+function toggleElem(el) {
+	el.style.display = (style.display == 'none') ? 'block' : 'none'
+}
+
+hamburger.addEventListener("click", () => {
+	hamburger.classList.toggle("is-active");
+	// nav.style.display = "inline";
+	// nav.style.transition = "all .3s ease";
+	toggleElem(nav);
+})
