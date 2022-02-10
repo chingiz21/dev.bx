@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+@import "nav.css";
+@import "header.css";
+@import "main_page_css.css";
+@import "movie_details.css";
+
+.wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}

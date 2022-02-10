@@ -1,0 +1,124 @@
+.header-wrapper {
+	display: flex;
+	height: 40px;
+	width: auto;
+	min-width: 1173px;
+
+}
+
+.header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	/*display: flex;*/
+	position: fixed;
+	background-color: #fff;
+	width: auto;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding: 26px 51px 21px 43px;
+	-webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+	z-index: 50;
+}
+
+.search-form {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 900px;
+	height: 40px;
+	margin-right: 134px;
+	position: relative;
+}
+
+.search-input {
+	min-width: 700px;
+	padding-left: 30px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	cursor: text;
+	border-bottom: 1px solid #999;
+}
+
+input::-webkit-input-placeholder {
+	color: #999;
+}
+
+input::-moz-placeholder {
+	color: #999;
+}
+
+input:-moz-placeholder {
+	color: #999;
+}
+
+input:-ms-input-placeholder {
+	color: #999;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+	display: none;
+}
+
+.fa-search {
+	position: absolute;
+	left: 0;
+	top: 10px;
+	width: 24px;
+	height: 24px;
+	color: grey;
+}
+
+.search-button {
+	width: 89px;
+	height: 40px;
+	margin-left: 15px;
+	background-color: #E7A04E;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: #fff;
+	font-family: Open Sans;
+	font-style: normal;
+	border-radius: 10px;
+}
+
+.search-button:hover {
+	background-color: #b57c37;
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.header_addMovie {
+	/*margin-left: 134px;*/
+	margin-right: 51px;
+	min-width: 900px;
+}
+
+.btn_addMovie {
+	border: none;
+	outline: none;
+	cursor: pointer;
+	width: 158px;
+	height: 40px;
+	background-color: #4EE7B0;
+	color: #fff;
+	font-family: Open Sans;
+	font-style: normal;
+	border-radius: 10px;
+}
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.btn_addMovie:hover {
+	background-color: #2dbd89;
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+}

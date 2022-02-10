@@ -1,0 +1,93 @@
+
+
+nav {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	min-width: 400px;
+	min-height: 500px;
+	background-color: #383838;
+}
+
+.nav-menu {
+	width: 341px;
+	height: 350px;
+	margin: 44px 30px 0;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: 600;
+}
+
+.nav-menu ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.nav-menu li {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 70px;
+	cursor: pointer;
+	padding-left: 15px;
+	border-bottom: 1px solid rgba(242, 242, 242, 0.1);
+}
+
+.nav-menu li:last-child {
+	border-bottom: none;
+}
+
+.nav-menu__active {
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nav-menu li:hover {
+	background-color: rgba(255, 255, 255, 0.05);
+	-webkit-transition: .3s ease;
+	transition: .3s ease;
+}
+
+nav a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+}
+
+.logo {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 52px 103px 44px 81px;
+	color: #43B0ED;
+}
+
+.logo-img {
+	min-width: 216px;
+	height: 74px;
+	background: url("../src/logos/BITFLIX.png") center no-repeat;
+}
+
+.main-container {
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	min-width: 1000px;
+}
